@@ -4,56 +4,154 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aurelius Calliste | Front-End Developer</title>
+  <!-- Google Fonts for nicer typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
-    <body style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 900px; margin:auto; padding:30px; line-height:1.7; background-color:#f9f9f9; color:#2c3e50;">
- <h1 style="color:#1abc9c; font-size:2.8em; margin-bottom:10px;">Aurelius Calliste</h1>
-  <p style="font-size:1.2em; color:#34495e; margin-bottom:30px;">
-    Senior Front-End Developer | React | TypeScript | AWS | Node.js
-  </p>
-
- <div class="section" style="margin-bottom:40px; padding:20px; background-color:white; border-radius:10px; box-shadow:0 4px 8px rgba(0,0,0,0.05);">
-    <h2 style="color:#1abc9c; margin-bottom:15px;">About Me</h2>
-    <p>
-      I am a Technical Lead and Senior Front-End Developer with over 8 years of experience building scalable, high-performance React applications.
-      I specialise in creating reusable components, optimising front-end performance, and mentoring teams to adopt best practices.
-      I enjoy collaborating with product, design, and backend teams to deliver clean, user-friendly interfaces while keeping code maintainable and efficient.
-    </p>
-  </div>
-    
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #e0f7fa, #f1f8e9);
+      color: #2c3e50;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 30px;
+    }
+    h1 {
+      color: #1abc9c;
+      font-size: 3em;
+      margin-bottom: 5px;
+    }
+    h2 {
+      color: #16a085;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+    }
+    h2 i {
+      margin-right: 10px;
+      color: #1abc9c;
+    }
+    p {
+      font-size: 1.1em;
+      line-height: 1.7;
+    }
+    .section {
+      background-color: white;
+      border-radius: 12px;
+      padding: 25px;
+      margin-bottom: 30px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+    }
+    .skills ul, .projects ul {
+      list-style: none;
+      padding: 0;
+    }
+    .skills li, .projects li {
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+    }
+    .skills li i, .projects li i {
+      margin-right: 10px;
+      color: #16a085;
+    }
+    .projects a.button {
+      background-color: #1abc9c;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 0.9em;
+      margin-left: 12px;
+      transition: background-color 0.3s ease;
+    }
+    .projects a.button:hover {
+      background-color: #16a085;
+    }
+    .projects a.project-link {
+      text-decoration: none;
+      font-weight: bold;
+      color: #2c3e50;
+      transition: color 0.3s ease;
+    }
+    .projects a.project-link:hover {
+      color: #1abc9c;
+    }
+    .contact a.button {
+      background-color: #1abc9c;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 0.9em;
+      margin-left: 12px;
+      transition: background-color 0.3s ease;
+    }
+    .contact a.button:hover {
+      background-color: #16a085;
+    }
   </style>
 </head>
 <body>
-  <h1>Aurelius Calliste</h1>
-  <p>Senior Front-End Developer | React | TypeScript | AWS</p>
+  <div class="container">
+    <!-- Header -->
+    <h1>Aurelius Calliste</h1>
+    <p>Senior Front-End Developer | React | TypeScript | AWS | Node.js</p>
 
-  <div class="section">
-    <h2>About Me</h2>
-    <p>I am a Technical Lead and Senior Front-End Developer with extensive experience building React applications, mentoring teams, and delivering high-quality user experiences.</p>
-  </div>
+    <!-- About Me -->
+    <div class="section about">
+      <h2><i class="fas fa-user"></i>About Me</h2>
+      <p>I am a Technical Lead and Senior Front-End Developer with over 8 years of experience building scalable, high-performance React applications. I specialise in creating reusable components, optimising front-end performance, and mentoring teams to adopt best practices. I enjoy collaborating with product, design, and backend teams to deliver clean, user-friendly interfaces while keeping code maintainable and efficient.</p>
+    </div>
 
-  <div class="section">
-    <h2>Skills</h2>
-    <ul>
-      <li>React, TypeScript, JavaScript, HTML5, CSS3</li>
-      <li>Redux, React Query, Tailwind CSS, Material UI</li>
-      <li>Node.js, AWS, Azure</li>
-      <li>CI/CD, Jest, Cypress, Agile/Scrum</li>
-    </ul>
-  </div>
+    <!-- Skills -->
+    <div class="section skills">
+      <h2><i class="fas fa-cogs"></i>Skills</h2>
+      <ul>
+        <li><i class="fab fa-react"></i> React, TypeScript, JavaScript, HTML5, CSS3</li>
+        <li><i class="fas fa-layer-group"></i> Redux, React Query, Tailwind CSS, Material UI</li>
+        <li><i class="fas fa-server"></i> Node.js, AWS, Azure</li>
+        <li><i class="fas fa-vial"></i> CI/CD, Jest, Cypress, Agile/Scrum</li>
+      </ul>
+    </div>
 
-  <div class="section">
-    <h2>Projects</h2>
-    <ul>
-      <li><a href="https://github.com/Callicodes/responsive-react-dashboard-react-tailwind-chartjs">React Dashboard - React,Tailwind, ChartJS</a></li>
-      <li><a href="https://github.com/Callicodes/react-todo-list-app">React Todo List App</a></li>
-      <li><a href="https://github.com/Callicodes/investment-fund-selector">Investment Fund Selector</a></li>
-    </ul>
-  </div>
+    <!-- Projects -->
+    <div class="section projects">
+      <h2><i class="fas fa-project-diagram"></i>Projects</h2>
+      <ul>
+        <li>
+          <i class="fas fa-folder-open"></i>
+          <a class="project-link" href="https://github.com/callicodes/my-react-dashboard" target="_blank">React Dashboard</a>
+          <a class="button" href="https://github.com/callicodes/my-react-dashboard" target="_blank">View Project</a>
+        </li>
+        <li>
+          <i class="fas fa-folder-open"></i>
+          <a class="project-link" href="https://github.com/callicodes/portfolio-site" target="_blank">Portfolio Website</a>
+          <a class="button" href="https://github.com/callicodes/portfolio-site" target="_blank">View Project</a>
+        </li>
+        <li>
+          <i class="fas fa-folder-open"></i>
+          <a class="project-link" href="https://github.com/callicodes/ecommerce-app" target="_blank">E-commerce App</a>
+          <a class="button" href="https://github.com/callicodes/ecommerce-app" target="_blank">View Project</a>
+        </li>
+      </ul>
+    </div>
 
-  <div class="section">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:callicodes@gmail.com">callicodes@gmail.com</a></p>
-    <p>GitHub: <a href="https://github.com/callicodes">github.com/callicodes</a></p>
+    <!-- Contact -->
+    <div class="section contact">
+      <h2><i class="fas fa-envelope"></i>Contact</h2>
+      <p>Email: <a href="mailto:callicodes@gmail.com">callicodes@gmail.com</a>
+        <a class="button" href="mailto:callicodes@gmail.com">Send Email</a>
+      </p>
+      <p>GitHub: <a href="https://github.com/callicodes" target="_blank">github.com/callicodes</a>
+        <a class="button" href="https://github.com/callicodes" target="_blank">View Profile</a>
+      </p>
+    </div>
   </div>
 </body>
 </html>
