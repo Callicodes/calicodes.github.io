@@ -4,9 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aurelius Calliste | Front-End Developer</title>
-  <!-- Google Fonts for nicer typography -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <!-- Font Awesome for icons -->
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
     body {
@@ -60,19 +58,6 @@
       margin-right: 10px;
       color: #16a085;
     }
-    .projects a.button {
-      background-color: #1abc9c;
-      color: white;
-      padding: 6px 12px;
-      border-radius: 5px;
-      text-decoration: none;
-      font-size: 0.9em;
-      margin-left: 12px;
-      transition: background-color 0.3s ease;
-    }
-    .projects a.button:hover {
-      background-color: #16a085;
-    }
     .projects a.project-link {
       text-decoration: none;
       font-weight: bold;
@@ -95,11 +80,41 @@
     .contact a.button:hover {
       background-color: #16a085;
     }
+
+    /* New project card layout */
+    .project-card {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      margin-bottom: 25px;
+      gap: 20px;
+      background-color: #f8f9fa;
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+    .project-card img {
+      width: 300px;
+      max-width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .project-card .project-info {
+      flex: 1;
+    }
+    .other-projects li {
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+    }
+    .other-projects li i {
+      margin-right: 10px;
+      color: #16a085;
+    }
   </style>
 </head>
 <body>
   <div class="container">
-    <!-- Header -->
     <h1>Aurelius Calliste</h1>
     <p>Senior Front-End Developer | React | TypeScript | AWS | Node.js</p>
 
@@ -123,13 +138,19 @@
     <!-- Projects -->
     <div class="section projects">
       <h2><i class="fas fa-project-diagram"></i>Projects</h2>
-      <ul>
-         <li>
-          <i class="fas fa-folder-open"></i>
-              <a class="project-link" href="https://github.com/Callicodes/react-dashboard-mui" target="_blank">React Dashboard (Material UI)</a>
-                <br>
-          <img src="images/dashboard.png" alt="React Dashboard Screenshot" style="max-width:100%; height:auto; margin-top:10px; border-radius:8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-        </li>
+
+      <!-- React Dashboard Card -->
+      <div class="project-card">
+        <img src="images/dashboard.png" alt="React Dashboard Screenshot">
+        <div class="project-info">
+          <h3>React Dashboard MUI</h3>
+          <p><a class="project-link" href="https://github.com/Callicodes/react-dashboard-mui" target="_blank">View on GitHub</a></p>
+          <p>This interactive Dashboard includes a calendar, an FAQ section, and a dynamic bar chart to help users organise information and visualise data efficiently.</p>
+        </div>
+      </div>
+
+      <!-- Other projects list -->
+      <ul class="other-projects">
         <li>
           <i class="fas fa-folder-open"></i>
           <a class="project-link" href="https://github.com/Callicodes/responsive-react-dashboard-react-tailwind-chartjs" target="_blank">React Dashboard (Tailwind/ChartJS)</a>
