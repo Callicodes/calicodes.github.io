@@ -3,27 +3,54 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aurelius Calliste | Front-End Developer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <title>Callicodes | Front-End Developer</title>
+  <!-- Google Fonts for nicer typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <!-- Font Awesome for icons -->
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
     body {
       font-family: 'Roboto', sans-serif;
+      font-style: italic;
       margin: 0;
       padding: 0;
-      background: linear-gradient(to right, #e0f7fa, #f1f8e9);
+      background: linear-gradient(to right, #fff9e6, #e0f7fa);
       color: #2c3e50;
     }
+
     .container {
       max-width: 900px;
       margin: auto;
       padding: 30px;
     }
-    h1 {
-      color: #1abc9c;
-      font-size: 3em;
-      margin-bottom: 5px;
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #f9d423, #fc913a, #00b4d8);
+      padding: 25px;
+      border-radius: 12px;
+      color: #fff;
+      text-align: center;
+      margin-bottom: 30px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
     }
+    header h1 {
+      margin: 0;
+      font-size: 3em;
+    }
+    header p {
+      margin-top: 5px;
+      font-size: 1.2em;
+    }
+
+    .section {
+      background-color: white;
+      border-radius: 12px;
+      padding: 25px;
+      margin-bottom: 30px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+    }
+
     h2 {
       color: #16a085;
       margin-bottom: 15px;
@@ -34,21 +61,19 @@
       margin-right: 10px;
       color: #1abc9c;
     }
+
     p {
       font-size: 1.1em;
       line-height: 1.7;
     }
-    .section {
-      background-color: white;
-      border-radius: 12px;
-      padding: 25px;
-      margin-bottom: 30px;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.08);
-    }
+
+    /* Skills and Projects */
     .skills ul, .projects ul {
       list-style: none;
       padding: 0;
+      margin: 0;
     }
+
     .skills li, .projects li {
       margin-bottom: 12px;
       display: flex;
@@ -58,65 +83,73 @@
       margin-right: 10px;
       color: #16a085;
     }
-    .projects a.project-link {
+
+    /* Project cards */
+    .project-card {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 20px;
+      background: #f9f9f9;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+    .project-card img {
+      max-width: 200px;
+      height: auto;
+      border-radius: 8px;
+      margin-right: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .project-card .project-info h3 {
+      margin-top: 0;
+      margin-bottom: 8px;
+      font-size: 1.3em;
+      color: #1abc9c;
+    }
+    .project-card .project-info a {
       text-decoration: none;
       font-weight: bold;
       color: #2c3e50;
       transition: color 0.3s ease;
     }
-    .projects a.project-link:hover {
-      color: #1abc9c;
+    .project-card .project-info a:hover {
+      color: #16a085;
     }
-    .contact a.button {
+
+    /* Contact section */
+    .contact-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 15px;
+      flex-wrap: wrap;
+    }
+    .contact-item span {
+      margin-right: 15px;
+    }
+    .contact-item a.button {
       background-color: #1abc9c;
       color: white;
       padding: 6px 12px;
       border-radius: 5px;
       text-decoration: none;
       font-size: 0.9em;
-      margin-left: 12px;
       transition: background-color 0.3s ease;
+      margin-top: 5px;
     }
-    .contact a.button:hover {
+    .contact-item a.button:hover {
       background-color: #16a085;
     }
 
-    /* New project card layout */
-    .project-card {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: flex-start;
-      margin-bottom: 25px;
-      gap: 20px;
-      background-color: #f8f9fa;
-      border-radius: 10px;
-      padding: 15px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-    }
-    .project-card img {
-      width: 300px;
-      max-width: 100%;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
-    .project-card .project-info {
-      flex: 1;
-    }
-    .other-projects li {
-      margin-bottom: 12px;
-      display: flex;
-      align-items: center;
-    }
-    .other-projects li i {
-      margin-right: 10px;
-      color: #16a085;
-    }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Aurelius Calliste</h1>
-    <p>Senior Front-End Developer | React | TypeScript | AWS | Node.js</p>
+    <header>
+      <h1>Callicodes</h1>
+      <p>Front-End Developer Portfolio</p>
+    </header>
 
     <!-- About Me -->
     <div class="section about">
@@ -139,43 +172,27 @@
     <div class="section projects">
       <h2><i class="fas fa-project-diagram"></i>Projects</h2>
 
-      <!-- React Dashboard Card -->
       <div class="project-card">
         <img src="images/dashboard.png" alt="React Dashboard Screenshot">
         <div class="project-info">
-          <h3>React Dashboard MUI</h3>
-          <p><a class="project-link" href="https://github.com/Callicodes/react-dashboard-mui" target="_blank">View on GitHub</a></p>
-          <p>This interactive Dashboard includes a calendar, an FAQ section, and a dynamic bar chart to help users organise information and visualise data efficiently.</p>
+          <h3>React Dashboard (Material UI)</h3>
+          <a href="https://github.com/Callicodes/react-dashboard-mui" target="_blank">View Project</a>
         </div>
       </div>
 
-      <!-- Other projects list -->
-      <ul class="other-projects">
-        <li>
-          <i class="fas fa-folder-open"></i>
-          <a class="project-link" href="https://github.com/Callicodes/responsive-react-dashboard-react-tailwind-chartjs" target="_blank">React Dashboard (Tailwind/ChartJS)</a>
-        </li>
-        <li>
-          <i class="fas fa-folder-open"></i>
-          <a class="project-link" href="https://github.com/Callicodes/react-todo-list-app" target="_blank">React Todo List App</a>
-        </li>
-        <li>
-          <i class="fas fa-folder-open"></i>
-          <a class="project-link" href="https://github.com/Callicodes/investment-fund-selector" target="_blank">Investment Fund Selector</a>
-        </li>
-      </ul>
-    </div>
+      <div class="project-card">
+        <div class="project-info">
+          <h3>React Dashboard (Tailwind/ChartJS)</h3>
+          <a href="https://github.com/Callicodes/responsive-react-dashboard-react-tailwind-chartjs" target="_blank">View Project</a>
+        </div>
+      </div>
 
-    <!-- Contact -->
-    <div class="section contact">
-      <h2><i class="fas fa-envelope"></i>Contact</h2>
-      <p>Email: <a href="mailto:callicodes@gmail.com">callicodes@gmail.com</a>
-        <a class="button" href="mailto:callicodes@gmail.com">Send Email</a>
-      </p>
-      <p>GitHub: <a href="https://github.com/callicodes" target="_blank">github.com/callicodes</a>
-        <a class="button" href="https://github.com/callicodes" target="_blank">View Profile</a>
-      </p>
-    </div>
-  </div>
-</body>
-</html>
+      <div class="project-card">
+        <div class="project-info">
+          <h3>React Todo List App</h3>
+          <a href="https://github.com/Callicodes/react-todo-list-app" target="_blank">View Project</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-info">
